@@ -14,12 +14,11 @@ struct NOTIFICATIONSYSTEM_API FNotification
 public:
 
     UPROPERTY(SaveGame, EditAnywhere,BlueprintReadWrite, Category="Notification System")
-        FGameplayTag CategoryTag;
+    FGameplayTag CategoryTag;
 
     UPROPERTY(SaveGame, EditAnywhere, BlueprintReadWrite, Category = "Notification System")
-        FText Name;
+    FText Name;
 
     UPROPERTY(SaveGame, EditAnywhere, BlueprintReadWrite, Category = "Notification System",meta = (MultiLine = true))
-        FText Description;
-
+    FText Description;
 };

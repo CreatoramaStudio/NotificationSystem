@@ -20,15 +20,15 @@ class NOTIFICATIONSYSTEM_API UNotificationSubsystem : public UGameInstanceSubsys
 public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Notification System|Event")
-		FOnNotificationMulticast OnPushNotification;
+	FOnNotificationMulticast OnPushNotification;
 
 	UPROPERTY(BlueprintAssignable, Category = "Notification System|Event")
-		FOnNotificationMulticast OnPopNotification;
+	FOnNotificationMulticast OnPopNotification;
 
 protected:
 
 	UPROPERTY(SaveGame)
-		TArray<FNotification> Notifications;
+	TArray<FNotification> Notifications;
 
 private:
 
@@ -41,13 +41,12 @@ public:
 	virtual void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "Notification System")
-		void PushNotification(FNotification Notification);
+	void PushNotification(FNotification Notification);
 
 	UFUNCTION(BlueprintCallable, Category = "Notification System")
-		bool PopNotification(FNotification& Notification);
+	bool PopNotification(FNotification& Notification);
 
 protected:
 
 private:
-
 };
